@@ -379,15 +379,81 @@ header {
 		li {
 			width: 210px;
 			display: inline-block;
-			cursor: pointer;
 			position: relative;
+			top: 75px;
 			text-align: left;
+
+			&:not(:last-child) {
+				margin-right: 30px;
+			}
+
+			.image {
+				width: 210px;
+				height: 255px;
+				border: 1px solid rgba(48, 48, 49, 0.1);
+				text-align: center;
+				margin-bottom: 20px;
+				position: relative;
+				cursor: pointer;
+
+				&:after {
+					content: '';
+					position: absolute;
+					display: block;
+					top: 50%;
+					-webkit-transform: translateY(-50%);
+				     -o-transform: translateY(-50%);
+				        transform: translateY(-50%);
+					left: 0;
+					right: 0;
+					margin: auto;
+					width: 195px;
+					height: 240px;
+				}
+
+				&:hover {
+
+					&:after {
+						background: rgba(48, 48, 49, 0.1);
+					}
+				}
+			}
+
+			.search {
+				position: absolute;
+				bottom: 20px;
+				right: 20px;
+				z-index: 1;
+			}
+
+			.goods {
+				position: relative;
+				top: 50%;
+				margin: 0 auto;
+				-webkit-transform: translateY(-50%);
+				     -o-transform: translateY(-50%);
+				        transform: translateY(-50%);
+			}
 
 			.name {
 				font-size: 22px;
 				font-family: Calibri;
 				color: @color-red-light;
 				display: block;
+				position: relative;
+				padding: 0 10px;
+
+				&:after {
+					content: '';
+					position: absolute;
+					top: 35px;
+					left: 0; 
+					right: 0;
+					margin: 0 auto;
+					width: 85px;
+					height: 1px;
+					background: rgba(48, 48, 49, 0.1);
+				}
 			}
 
 			.description {
@@ -395,6 +461,8 @@ header {
 				font-family: Calibri;
 				color: #464646;
 				display: block;
+				padding: 0 10px;
+				margin-top: 25px;
 			}
 
 			.price {
@@ -402,12 +470,14 @@ header {
 				font-family: CalibriBold;
 				color: @color-red-light;
 				display: inline-block;
+				margin-top: 20px;
+				padding: 0 10px;
 			}
 
 			button {
 				display: inline-block;
 				width: 80px;
-				padding: 6px 0 4px 0;
+				padding: 5px 0 3px 0;
 				background: @color-red-light;
 				font-size: 14px;
 				font-family: CalibriLight;
@@ -416,6 +486,15 @@ header {
 				position: absolute;
 				right: 20px;
 				bottom: 0;
+				border: 2px solid transparent;
+				box-sizing: border-box;
+				cursor: pointer;
+
+				&:hover {
+					border: 2px solid @color-red-light;
+					color: @color-red-light;
+					background: @color-white;
+				}
 			}
 		}
 

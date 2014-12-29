@@ -5,7 +5,7 @@
 @color-gray-opacity: rgba(20, 20, 22, 0.5);
 @color-black: #1b1b1b;
 @color-black-lighten: #202020;
-@color-red-medium: #e94a35;
+@color-red-medium: #e94d38;
 @color-red-light: #ed7160;
 @color-white: #ffffff;
 @color-white-opacity: rgba(255, 255, 255, 0.5);
@@ -30,6 +30,7 @@ body, html {
 	height: 100%;
 	padding: 0;
 	margin: 0;
+	position: relative;
 }
 
 button, input {
@@ -94,38 +95,6 @@ header {
 		}	    
 	}
 
-	.nav {
-		display: inline-block;
-		position: absolute;
-		top: 50%;
-		left: 70px;
-		-webkit-transform: translateY(-50%);
-			 -o-transform: translateY(-50%);
-			    transform: translateY(-50%);
-
-		li {
-			display: inline-block;
-		}
-
-		li:last-child {
-
-			a {
-				padding-right: 5px;
-			}
-		}
-
-		a {
-			font-size: 12px;
-			font-family: CalibriLight;
-			color: @color-gray-medium;
-			padding: 10px 15px;
-
-			&:hover {
-				color: lighten(@color-gray-medium, 15%)
-			}
-		}
-	}
-
 	.basket {
 		display: inline-block;
 		position: absolute;
@@ -165,29 +134,12 @@ header {
 			}
 		}	    
 	}
-
-	.counter {
-		width: 15px;
-		height: 15px;
-		display: inline-block;
-		cursor: pointer;
-		background: lighten(@color-gray-dark, 5%);
-		border-radius: 2px;
-		font-size: 12px;
-		font-family: CalibriLight;
-		color: @color-gray-medium;
-		text-align: center;
-
-		&:hover {
-			color: lighten(@color-gray-medium, 15%)
-		}
-	}
 }
 
 .main {
 	position: relative;
 
-	.logo {
+	.logotype {
 		width: 100%;
 		height: 90px;
 		position: relative;
@@ -204,7 +156,7 @@ header {
 			    transform: translateY(-50%);
 			margin: 0 auto;
 			text-align: center;
-			padding: 10px 0;
+			padding: 9px 0 5px 0;
 			box-sizing: border-box;
 			border: 2px solid @color-white;
 		}
@@ -258,7 +210,6 @@ header {
 				font-family: CalibriBold;
 				color: @color-red-medium;
 				border: 2px solid @color-red-medium;
-				border-radius: 3px;
 				text-transform: uppercase;
 				cursor: pointer;
 
@@ -374,11 +325,13 @@ header {
 			width: 100%;
 			display: block;
 			background: @color-white;
+			padding-bottom: 145px;
 		}
 
 		li {
-			width: 210px;
+			width: 200px;
 			display: inline-block;
+			vertical-align: top;
 			position: relative;
 			top: 75px;
 			text-align: left;
@@ -497,8 +450,412 @@ header {
 				}
 			}
 		}
+	}
+
+	.info {
+		width: 100%;
+		position: relative;
+		background: #f4f4f4;
+		padding: 50px 0 50px 0;
+		text-align: center;
+
+		.text {
+			font-size: 24px;
+			font-family: CalibriLight;
+			color: #303031;
+			-webkit-font-smoothing: antialiased;
+
+			span {
+				font-family: Calibri;
+			}
+		}
+
+		button {
+			font-size: 14px;
+			font-family: CalibriBold;
+			color: rgba(48, 48, 49, 0.2);
+			border: 2px solid rgba(48, 48, 49, 0.2);
+			width: 100px;
+			padding: 7px 0 5px 0;
+			box-sizing: border-box;
+			text-transform: uppercase;
+			margin-top: 35px;
+			cursor: pointer;
+
+			&:hover {
+				background: rgba(48, 48, 49, 0.3);
+				border: 2px solid transparent;
+				color: #f4f4f4;
+			}
+		}
+	}
+
+	.adds {
+		width: 100%;
+		position: relative;
+		background: url(../img/bg-2.jpg);
+
+		img {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 90px;
+		}
+
+		.description {
+			width: 420px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.text {
+			font-size: 44px;
+			font-family: CalibriLight;
+			color: @color-white;
+			margin-bottom: 15px;
+			-webkit-font-smoothing: antialiased;
+
+			span {
+				color: #f3d441;
+			}
+		}
+
+		button {
+			font-size: 18px;
+			font-family: CalibriLight;
+			color: @color-white;
+			border: 2px solid @color-white;
+			text-transform: uppercase;
+			width: 140px;
+			padding: 7px 0 5px 0;
+			box-sizing: border-box;
+			cursor: pointer;
+
+			&:hover {
+				border: 2px solid transparent;
+				background: @color-white;
+				color: #222222;
+			}
+		}
+	}
+
+	.partners {
+		width: 100%;
+		position: relative;
+		background: #f4f4f4;
+		padding: 60px 0 60px 0;
+		text-align: center;
+
+		li {
+			display: inline-block;
+			opacity: .2;
+			cursor: pointer;
+
+			&:not(:last-child) {
+				margin-right: 20px;
+			}
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	.services {
+		width: 100%;
+		position: relative;
+		padding: 50px 0;
+		text-align: center;
+
+		li {
+			width: 190px;
+			display: inline-block;
+			vertical-align: top;
+			text-align: left;
+			-webkit-font-smoothing: antialiased;
+			position: relative;
+
+			&:not(:last-child) {
+				margin-right: 45px;
+			}
+
+			.title {
+				font-size: 30px;
+				font-family: CalibriLight;
+				color: #202020;
+				position: relative;
+				margin-bottom: 10px;
+
+				&:after {
+					content: '';
+					position: absolute;
+					width: 70px;
+					height: 1px;
+					background: rgba(48, 48, 49, 0.2);
+					top: 0px;
+					left: 0;
+					margin-top: 50px;
+				}
+			}
+
+			.list {
+				margin-top: 30px;
+			}
+
+			a {
+				font-size: 21px;
+				font-family: CalibriLight;
+				color: @color-red-medium;
+				display: block;
+
+				&:hover {
+					color: darken(@color-red-medium, 20%)
+				}
+			}
+		}
+	}
+
+	.payments {
+		width: 100%;
+		position: relative;
+		background: @color-red-medium;
+		text-align: center;
+		padding: 30px;
+
+		img {
+			opacity: .2;
+			display: inline-block;
+			vertical-align: middle;
+			cursor: pointer;
+
+			&:not(:last-child) {
+				margin-right: 50px;
+			}
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	.social {
+		width: 100%;
+		height: 80px;
+		position: relative;
+		background: #202020;
+
+		.copyrights {
+			display: inline-block;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			 -o-transform: translateY(-50%);
+			    transform: translateY(-50%);
+		}
+
+		.logo {
+			font-size: 21px;
+			font-family: CalibriLight;
+			color: #4d4d4d;
+			text-transform: uppercase;
+			border: 2px solid #4d4d4d;
+			width: 110px;
+			padding: 7px 0 5px 0;
+			box-sizing: border-box;
+			display: inline-block;
+			vertical-align: middle;
+			text-align: center;
+		}
+
+		.text {
+			display: inline-block;
+			vertical-align: middle;
+			width: 125px;
+			font-size: 14px;
+			font-family: CalibriLight;
+			color: #4d4d4d;
+			margin-left: 5px;
+
+			span {
+				color: @color-red-medium;
+			}
+		}
+
+		.icons {
+			position: absolute;
+			right: 0;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			 -o-transform: translateY(-50%);
+			    transform: translateY(-50%);
+
+			li {
+				display: inline-block;
+				margin-right: 5px;
+			}
+		}
 
 	}
+}
+
+.nav {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 70px;
+	-webkit-transform: translateY(-50%);
+		 -o-transform: translateY(-50%);
+		    transform: translateY(-50%);
+
+	li {
+		display: inline-block;
+	}
+
+	li:last-child {
+
+		a {
+			padding-right: 5px;
+		}
+	}
+
+	a {
+		font-size: 12px;
+		font-family: CalibriLight;
+		color: @color-gray-medium;
+		padding: 10px 15px;
+
+		&:hover {
+			color: lighten(@color-gray-medium, 15%)
+		}
+	}
+}
+
+.counter {
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	cursor: pointer;
+	background: lighten(@color-gray-dark, 5%);
+	border-radius: 2px;
+	font-size: 12px;
+	font-family: CalibriLight;
+	color: @color-gray-medium;
+	text-align: center;
+
+	&:hover {
+		color: lighten(@color-gray-medium, 15%)
+	}
+}
+
+footer {
+	width: 100%;
+	height: 45px;
+	background: #1b1b1b;
+
+	 .nav {
+	 	left: -15px;
+	 }
+}
+
+.grid-popup {
+	width: 930px;
+	margin: 0 auto;
+	position: absolute;
+	top: 50px;
+	right: 0;
+	left: 0;
+}
+
+.basket-popup {
+	width: 230px;
+	background: @color-red-medium;
+	padding: 20px 10px 30px 20px;
+	box-sizing: border-box;
+	position: absolute;
+	right: 0;
+	display: none;
+
+	.close {
+		color: #99392d;
+		position: absolute;
+		right: 5px;
+		top: 5px;
+		cursor: pointer;
+	}
+
+	.header {
+		font-size: 12px;
+		font-family: Calibri;
+		color: @color-white;
+		margin-bottom: 25px;
+
+		span:first-of-type {
+			font-size: 14px;
+			display: block;
+		}
+
+		.price {
+			font-family: CalibriBold;
+		}
+	}
+
+	li {
+		margin-bottom: 25px;
+		font-size: 12px;
+		font-family: CalibriBold;
+		color: @color-white;
+		position: relative;
+		cursor: pointer;
+
+		.remove {
+			display: block;
+			position: absolute;
+			right: 5px;
+			cursor: pointer;
+			opacity: .5;
+		}
+
+		img {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 20px;
+		}
+
+		.text {
+			display: inline-block;
+			vertical-align: middle;
+
+			span {
+				display: block;
+				margin-bottom: 5px;
+			}
+
+			span:last-of-type {
+				font-size: 14px;
+			}
+		}
+	}
+
+	button {
+		padding: 7px 10px 5px 10px;
+		border: 2px solid #99392d;
+		font-size: 12px;
+		font-family: CalibriBold;
+		color: #99392d;
+		text-transform: uppercase;
+		margin-right: 10px;
+		cursor: pointer;
+		-webkit-font-smoothing: antialiased;
+
+		&:hover {
+			border: 2px solid @color-white;
+			color: @color-white;
+		}
+	}
+}
+
+.visible {
+	display: block;
 }
 
 

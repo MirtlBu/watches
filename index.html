@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.2/fotorama.css" rel="stylesheet">
+	<!-- <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.2/fotorama.css" rel="stylesheet"> -->
 	<meta content="text/html; charset=utf-8; ru" http-equiv="Content-Type">
 	<title>Watches</title>
 </head>
@@ -53,11 +53,16 @@
 		<div class="brands">
 			<div class="grid">
 				<div class="slider">
-					<span class="arrow-prev"></span>
-					<img class="slider__item" src="img/brand-1.png"></img>
-					<img class="slider__item" src="img/brand-1.png"></img>
-					<img class="slider__item" src="img/brand-1.png"></img>
-					<span class="arrow-next"></span>
+					<div class="arrow arrow--prev"></div>
+					<div class="frame-wrap">
+						<div class="frame">
+							<img class="slider__item" src="img/brands-1.png"></img>
+							<img class="slider__item" src="img/brands-2.png"></img>
+							<img class="slider__item" src="img/brands-3.png"></img>
+							<img class="slider__item" src="img/brands-4.png"></img>
+						</div>
+					</div>
+					<div class="arrow arrow--next"></div>
 				</div>
 			</div>
 		</div>
@@ -89,6 +94,7 @@
 
 		<div class="best">
 			<div class="title">Лучшие товары</div>
+			<div class="grid">
 				<ul>
 					<li>
 						<div class="image">
@@ -131,6 +137,7 @@
 						<button type="button">Купить</button>
 					</li>
 				</ul>
+			</div>
 		</div>
 
 		<div class="info">
@@ -309,17 +316,7 @@
 	</div>
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.2/fotorama.js"></script>
-	<script type="text/javascript">
-		$(function() {
-			$('header').on('click', '.basket', function() {
-				$('.basket-popup').addClass('visible');
-			});
-			$('.basket-popup').on('click', '.close', function() {
-				$('.basket-popup').removeClass('visible');
-			})
-		})
-	</script>
+	<script type="text/javascript" src="js/script.js"></script>
 	
 </body>
 </html>
